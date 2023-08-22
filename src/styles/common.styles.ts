@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const CommonWrapper = styled.div`
   margin: 0 auto;
   max-width: 420px;
+  padding: 0;
 `
 
 export const CommonContainer = styled.div`
-  margin: 0 auto;
+  margin: 0 0;
+  padding: 0;
   max-width: 420px;
 `
 

@@ -7,15 +7,15 @@ export const DefaultSearchboxData: SearchBox[] = [
         route: APP_ROUTES.imprint
     },
     {
-        label: "That's Me",
-        route: APP_ROUTES.person
-    },
-    {
         label: "Portfolio",
         route: APP_ROUTES.portfolio
     },
     {
         label: "Social Media",
         route: APP_ROUTES.mediaLinks
+    },
+    {
+        label: "That's Me",
+        route: APP_ROUTES.person
     }
 ]

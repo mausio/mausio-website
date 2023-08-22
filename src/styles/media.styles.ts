@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
+export const MediaSpacer = styled.div`
+  margin: 0 10px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  row-gap: 5px;
+`
+
 export const ChatContainer = styled.div`
-  min-height: 50vh;
+  min-height: 52.5vh;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -9,31 +17,20 @@ export const ChatContainer = styled.div`
   align-content: start;
   background-color: var(--opacity-background);
   backdrop-filter: blur(3px);
-  padding: 10px;
-  margin: 5px;
+  padding: 0;
+  margin: 0;
   border-radius: 15px;
   overflow: hidden;
 
 
   div {
-    animation: bubbleAppear 0.5s ease-out forwards;
-    -webkit-animation: bubbleAppear 1s ease-out forwards;
+    animation: bubbleAppear 0.3s ease-out forwards;
+    -webkit-animation: bubbleAppear 0.3s ease-out forwards;
   }
 
   div:first-of-type {
     animation-delay: 0.2s;
     -webkit-animation-delay: 0.2s;
-    margin: 20px 0;
-  }
-
-  div:nth-of-type(2) {
-    animation-delay: 2.5s;
-    -webkit-animation-delay: 2.5s;
-  }
-
-
-  div:last-of-type {
-    margin-bottom: 20px;
   }
 
 
@@ -52,6 +49,8 @@ export const ChatContainer = styled.div`
 export const Bubble = styled.div`
   --r: 25px;
   --t: 30px;
+
+  margin: 25px 25px 25px 0 !important;
 
   max-width: 200px;
   padding: calc(2 * var(--r) / 3);
@@ -87,18 +86,63 @@ export const Bubble = styled.div`
   }
 `
 
-export const MediaLinesContainer = styled.div`
-
+export const LinksContainer = styled.div`
+  a {
+    margin: 10px;
+  }
 `
 
-export const MediaLine = styled.div`
-  width: 100vw;
-`
+export const LinkButton = styled.div`
+  display: flex;
+  flex-direction: row;
 
-export const Instagram = styled.div`
-  height: 200px;
-  width: 200px;
-  background-image: url(InstaPic);
-  background-repeat: repeat-x;
-  background-size: 20px 20px;
+  border: 2px solid var(--tertiary-background);
+  padding: 5px 0;
+  margin: 0 5px;
+  border-radius: 25px;
+
+  img {
+    height: 30px;
+    position: absolute;
+    left: 0;
+    margin: 0 0 0 20px;
+    padding: 0;
+    filter: brightness(100%);
+  }
+
+  p {
+    font-size: 1rem;
+    align-self: center;
+    padding: 5px 0;
+    margin: 0 auto;
+    color: var(--tertiary-color);
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+  }
+
+  position: relative;
+
+  transition: 0.28s ease;
+  scale: 1.0;
+  right: 0;
+  bottom: 0;
+  box-shadow: none;
+  background: transparent;
+
+  &:hover {
+    transition: 0.36s ease;
+    right: 3px;
+    bottom: 5px;
+    box-shadow: 3px 3px 2px var(--opacity-background);
+    background: var(--secondary-background);
+
+    p {
+      filter: brightness(105%);
+    }
+
+    img {
+      filter: brightness(105%);
+    }
+  }
+
 `
