@@ -122,17 +122,18 @@ export const LinkButton = styled.div`
 
   position: relative;
 
-  transition: 0.28s ease;
+  transition: 0.3s ease-out;
   scale: 1.0;
   right: 0;
   bottom: 0;
   box-shadow: none;
   background: transparent;
+  filter: none;
 
   &:hover {
-    transition: 0.36s ease;
-    right: 3px;
-    bottom: 5px;
+    transition: 0.25s ease-out;
+    right: 2px;
+    bottom: 3px;
     box-shadow: 3px 3px 2px var(--opacity-background);
     background: var(--secondary-background);
 
@@ -142,6 +143,25 @@ export const LinkButton = styled.div`
 
     img {
       filter: brightness(105%);
+    }
+  }
+
+  &:active {
+    transition: 0.15s ease;
+    right: -1px;
+    bottom: -1px;
+    box-shadow: 0.5px 0.5px 2px var(--opacity-background),
+    inset 3px 3px 3px var(--primary-background);
+    background: var(--secondary-background);
+    
+    filter: contrast(102%);
+
+    p {
+      filter: brightness(98%);
+    }
+
+    img {
+      filter: brightness(98%);
     }
   }
 
