@@ -51,11 +51,16 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     line-height: 1.25;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: Roboto, Sans-Serif;
-    //background-color: var(--primary-background);
+    background-color: var(--primary-background);
 
+    position: relative;
+    z-index: -10;
+    
     //TODO: Remove Scrollbar
     
     ::-webkit-scrollbar {

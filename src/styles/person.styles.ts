@@ -7,30 +7,46 @@ export const PortraitImg = styled.img`
   border-radius: 10px;
   object-fit: cover;
   filter: brightness(1.02);
-  justify-self: end;
+  justify-self: start;
   grid-area: portrait;
   margin: 5px;
   padding: 0;
+  background: var(--opacity-background);
+  backdrop-filter: blur(2px);
 `
 
 export const PersonContainer = styled.div`
   display: grid;
 
   grid-template-areas: 
-  "summary portrait"
+  "portrait summary"
   "drive drive"
   "degrees degrees"
   "workExperience workExperience"
   "rating rating";
 
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   margin: 5px;
   row-gap: 5px;
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:
+    "portrait summary summary summary"
+    "drive drive rating rating"
+    "degrees degrees rating rating"
+    "degrees degrees workExperience workExperience"
+    "degrees degrees workExperience workExperience";
+  }
 `
 
 export const SummaryContainer = styled.div`
   grid-area: summary;
+  justify-self: center;
+  align-self: center;
+  max-width: 300px;
 `
 
 export const DegreesContainer = styled.div`

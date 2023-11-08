@@ -4,7 +4,7 @@ import {
     CommonWrapper,
     Paragraph,
 } from "../styles/common.styles";
-import Portrait from "../static/img/portrait.jpg"
+import Portrait from "../static/img/portrait-lucent.png"
 import {
     AccordionsContainer, DegreesContainer, Introduction,
     PersonContainer,
@@ -36,13 +36,15 @@ const crumbs: Crumb[] = [
     {label: "That's me", route: APP_ROUTES.person}
 ]
 
+
+
 const programmingLanguages: RatingLabel[] = [
     {
         label: "Typescript",
         level: 2.5
     }, {
         label: "JavaScript",
-        level: 2
+        level: 2.5
     }, {
         label: "HTML",
         level: 2
@@ -53,16 +55,49 @@ const programmingLanguages: RatingLabel[] = [
         label: "Java",
         level: 1.5
     },
+    {
+        label: "Go",
+        level: 1
+    },
+    {
+        label: "Swift",
+        level: 1
+    }
 ]
 
 const frameworks: RatingLabel[] = [
     {
         label: "React.js",
-        level: 2.5
+        level: 2
     },
     {
         label: "Next.js",
+        level: 1.5
+    }, {
+        label: "Echo",
+        level: 1
+    }
+]
+
+
+
+const misc: RatingLabel[] = [
+    {
+        label: "Docker",
+        level: 1
+    }
+]
+
+const creativeArt: RatingLabel[] = [
+    {
+        label: "Final Cut Pro X",
+        level: 2.5
+    }, {
+        label: "Photoshop",
         level: 2
+    }, {
+        label: "Adobe Premiere",
+        level: 1.5
     }
 ]
 
@@ -256,6 +291,12 @@ const ThatsMe = () => {
                                         <RatingComponent
                                             ratings={frameworks}
                                             title={"Frameworks: "}/>
+                                        <RatingComponent
+                                            ratings={creativeArt}
+                                            title={"Creative and Art: "}/>
+                                        <RatingComponent
+                                            ratings={misc}
+                                            title={"Misc: "}/>
                                     </RatingSection>
                                     <Paragraph>
                                         Something less measurable: I am advanced

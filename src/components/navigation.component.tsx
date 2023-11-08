@@ -3,11 +3,11 @@ import {
     FooterContainer,
     FooterLinks,
     LogoContainer,
-    LogoTitle
+    LogoTitle,
 } from "../styles/nav.styles";
 import {APP_ROUTES} from "../routes/routes";
 import {BackgroundComponent} from "./background.component";
-
+``
 const NavigationComponent = () => {
     const navigate = useNavigate();
 

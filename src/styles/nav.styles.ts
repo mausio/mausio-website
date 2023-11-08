@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 export const LogoTitle = styled.h1`
   position: relative;
   z-index: 100;

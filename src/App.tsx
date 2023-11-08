@@ -6,6 +6,8 @@ import ImprintComponent from "./components/imprint.component.tsx";
 import ThatsMe from "./components/thatsMe.component.tsx";
 import MediaLinksComponent from "./components/mediaLinks.component.tsx";
 import NotFoundComponent from "./components/notFound.component.tsx";
+import ConstructionComponent from "./components/construction.component.tsx";
+import DadJokeComponent from "./components/dadJoke.component.tsx";
 
 function App() {
 
@@ -20,6 +22,13 @@ function App() {
                        element={<ThatsMe/>}/>
                 <Route path={APP_ROUTES.mediaLinks}
                        element={<MediaLinksComponent/>}/>
+                <Route path={APP_ROUTES.portfolio}
+                       element={<ConstructionComponent/>}/>
+                <Route path={APP_ROUTES.dadJoke} element={<DadJokeComponent/>}/>
+
+                {/*TODO: Make External Link Component dynamic*/}
+                <Route path={APP_ROUTES.linkedIn.url}
+                       element={<RedirectLinkedIn/>}/>
 
                 {/* TODO: Masonry image list from Materiul UI for Portfolio*/}
                 {/*TODO: Media-/Linktree erstellen als MindMap*/}
@@ -34,6 +43,12 @@ function App() {
             </Route>
         </Routes>
     );
+}
+
+
+function RedirectLinkedIn() {
+    window.location.replace(APP_ROUTES.linkedIn.externalUrl)
+    return null;
 }
 
 export default App

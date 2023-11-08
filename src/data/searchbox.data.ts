@@ -17,5 +17,9 @@ export const DefaultSearchboxData: SearchBox[] = [
     {
         label: "That's Me",
         route: APP_ROUTES.person
+    },
+    {
+        label: "Dad joke",
+        route: APP_ROUTES.dadJoke
     }
 ]

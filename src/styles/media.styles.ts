@@ -153,7 +153,7 @@ export const LinkButton = styled.div`
     box-shadow: 0.5px 0.5px 2px var(--opacity-background),
     inset 3px 3px 3px var(--primary-background);
     background: var(--secondary-background);
-    
+
     filter: contrast(102%);
 
     p {

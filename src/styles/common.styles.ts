@@ -2,14 +2,21 @@ import styled from "styled-components";
 
 export const CommonWrapper = styled.div`
   margin: 0 auto;
-  max-width: 420px;
   padding: 0;
 `
 
 export const CommonContainer = styled.div`
-  margin: 0 0;
+  margin: 0;
   padding: 0;
   max-width: 420px;
+
+  @media (min-width: 1000px) {
+    max-width: 900px;
+  }
+`
+
+export const CommonLimiter = styled.div`
+max-width: 420px;
 `
 
 export const CommonContainerWithBackground = styled.div`
@@ -17,7 +24,6 @@ export const CommonContainerWithBackground = styled.div`
   backdrop-filter: blur(3px);
   padding: 10px;
   margin: 5px;
-  max-width: 420px;
   border-radius: 15px;
   width: auto;
   overflow: hidden;

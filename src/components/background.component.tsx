@@ -3,60 +3,19 @@ import {BackgroundAnimation} from "../styles/background.styles";
 
 export const BackgroundComponent = () => {
 
-    return (
+    const spanArray: number[] = [];
 
+    for (let i = 0; i<50; i++){
+        spanArray[i] = 1;
+    }
+
+    return (
         <BackgroundAnimation>
             <div className="background">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                {spanArray.map((i)=>{
+                    console.log(i)
+                    return <span></span>
+                })}
             </div>
         </BackgroundAnimation>
     )

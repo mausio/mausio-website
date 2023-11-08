@@ -16,6 +16,7 @@
     "@material-ui/core": "^4.12.4",
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
+    "@uidotdev/usehooks": "^2.3.1",
     "babel": "^6.23.0",
     "babel-plugin-styled-components": "^2.1.4",
     "react": "^18.2.0",
